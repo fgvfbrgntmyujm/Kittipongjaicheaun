@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iris Prediction Result</title>
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body bgcolor="#a3cfb4">
+
+    <center>
+        <h1>  PREDICTION :  </h1>
+        {% if data == 'Iris-setosa' %}
+        <h1>Iris-setosa</h1>
+        <img src='static\setosa.jpg'>
+        {% else %}
+        <h1>Iris-versicolor</h1>
+        <img src='static\verci.jpg'>
+        {% endif %}
+        <br><br>
+        <a href='/'>go back to home page</a>
+    </center>
+
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Sepal length</td>
+            <td>{{ sepal_length }}</td>
+        </tr>
+        <tr>
+            <td>Sepal width</td>
+            <td>{{ sepal_width }}</td>
+        </tr>
+        <tr>
+            <td>Petal length</td>
+            <td>{{ petal_length }}</td>
+        </tr>
+        <tr>
+            <td>Petal width</td>
+            <td>{{ petal_width }}</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
